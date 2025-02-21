@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<ol>
+
+<li>
+<link href="https://apps.apple.com/ru/app/testflight/id899247664">Установить приложение TestFlight</link>
+</li>
+
+<li>
+Скопировать эту ссылку:</br>
+https://raw.githubusercontent.com/kefyru/nc/refs/heads/main/appinfo.xml<br/>
+<button>Скопировать</button>
+</li>
+
+<li>
+<link href="https://raw.githubusercontent.com/kefyru/nc/refs/heads/main/appinfo.xml">Установить приложение UIX для тестирования</link>
+</li>
+
+<li>
+Запустить приложение UIX, в верхнем левом углу нажать плюсик<br/>
+Вставить в поле скопированную ссылку, нажать ввод.
+Через несколько секунд появится приложение NC, жмем Install, запускаем
+</li>
+<li>
+В поле "логин" вводим номер телефона в формате +71231231212<br/>
+Звоним на хелп что бы получить код.
+</li>
+</ol>
+
+</body>
+<script>
+const btn = document.querySelector('button');
+btn.addEventListener('click', e => {
+  navigator.clipboard.writeText("https://raw.githubusercontent.com/kefyru/nc/refs/heads/main/appinfo.xml")
+    .then(() => btn.innerText = 'Скопировано')
+    .catch(err => btn.innerText = 'Ошибка копирования, скопируйте вручную'))
+})
+</script>
+</html>
